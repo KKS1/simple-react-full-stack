@@ -5,14 +5,15 @@
   "main": "src/server/index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "npm run build && node src/server/index.js",
+    "start": "yarn build && node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"yarn server\" \"yarn client\""
   },
-  "author": "Sandeep Raveesh",
+  "author": "Kanwaljeet Kalra",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.3",
     "react": "^16.5.2",
@@ -35,7 +36,9 @@
     "eslint-plugin-react": "^7.7.0",
     "file-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
     "nodemon": "^1.17.3",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
